@@ -6,6 +6,7 @@
 """
 
 import logging
+import os
 import time
 from typing import Any, List, Optional, Union, Mapping
 
@@ -164,7 +165,15 @@ class SOTA:
         if self.sota_cmd is None:
             raise DispatcherException('sota_cmd is None')
         release_date = self._parsed_manifest['release_date']
+        if not os.path.exists(SOTA_CACHE):
+            try:
+                os.mkdir(SOTA_CACHE)
+            except OSError as e:
+                raise DispatcherException(f"SOTA cache directory {SOTA_CACHE} cannot be created: {e}") from e
+        elif not os.path.isdir(SOTA_CACHE):
+            raise DispatcherException(f"SOTA cache directory {SOTA_CACHE} already exists and is not a directory")
         sota_cache_repo = DirectoryRepo(SOTA_CACHE)
+            
         is_rollback_available = not self.proceed_without_rollback
         time_to_wait_before_reboot = 2 if not skip_sleeps else 0
 
