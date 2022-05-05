@@ -1184,6 +1184,9 @@ titled **`Decommission Device`**.
 <img src="media/In-Band Manageability User Guide - ThingsBoard/media/image61.png" style="width:5.78125in;height:3.59762in" />
 
 The query command capabilities are supported via manifest.
+Query-Option | Description
+-------------|-------------
+'hw' - Hardware | It will provide the information of Hardware manufacture, Platform type, Product type, Model number, Serial number
 
 ### Query Commands via Manifest
 
