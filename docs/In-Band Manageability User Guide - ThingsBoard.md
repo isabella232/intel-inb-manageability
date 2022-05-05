@@ -1181,6 +1181,7 @@ Now on the pop-up window shows up, click the `Send` button on the box
 titled **`Decommission Device`**.
 
 ### Query Commands
+<img src="media/In-Band Manageability User Guide - ThingsBoard/media/image61.png" style="width:5.78125in;height:3.59762in" />
 
 The query command capabilities are supported via manifest.
 
