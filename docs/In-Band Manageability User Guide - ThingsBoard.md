@@ -1187,6 +1187,8 @@ The query command capabilities are supported via manifest.
 Query-Option | Description
 -------------|-------------
 'hw' - Hardware | It will provide the information of Hardware manufacture, Platform type, Product type, Model number, Serial number
+'fw' - Firmware | It will provide the information of Firmware date, Firmware version, Firmware vendor
+'guid' - GUID | It will provide the information of GUID of HDDL plug-in card and whether the HDDL plug in card is provisioned or not
 
 ### Query Commands via Manifest
 
